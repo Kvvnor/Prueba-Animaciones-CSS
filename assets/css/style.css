@@ -8,7 +8,7 @@
 
 .grid-container {
     display: grid;
-    grid-template-columns: 350px auto;
+    grid-template-columns: 250px auto;
     grid-template-rows: auto 1fr auto;
     grid-template-areas: 
     "sidebar header"
@@ -20,18 +20,65 @@
 
 .sidebar {
     grid-area: sidebar;
-    background-color: black;
+    background-color: #011826;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
 }
+
+.sidebar .sidebar-logo img{
+    width: 200px;
+}
+
+.menu li {
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+    list-style-type: none;
+
+}
+
+.menu a {
+    text-decoration: none;
+    color: #F2C9D8;
+    font-size: 1.3rem;
+
+}
+
+.menu-bars {
+    display: none;
+}
+
+
+
+/* Header */
 
 header {
     grid-area: header;
-    background-color: green;
+    background-color: #143447;
+    padding: 2rem;
+    display: flex;
+    justify-content: end;
+    gap: 23px;
 }
+
+header form input {
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    padding: 5px;  
+}
+
 
 main {
     grid-area: main;
-    background-color: yellow;
+    background-color: #012840;
 
+}
+
+main img {
+    width: 20%;
 }
 
 /* main .card-container {
@@ -48,5 +95,7 @@ main .card-container {
 
 footer {
     grid-area: footer;
-    background-color: blueviolet;
+    background-color: #025E73;
+    padding: 2rem;
+    position: relative;
 }
