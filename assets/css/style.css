@@ -3,3 +3,50 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Container Grid */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 350px auto;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "sidebar header"
+    "sidebar main"
+    "sidebar footer";
+}
+
+/* Sidebar */
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: black;
+}
+
+header {
+    grid-area: header;
+    background-color: green;
+}
+
+main {
+    grid-area: main;
+    background-color: yellow;
+
+}
+
+/* main .card-container {
+
+}
+
+main .card-container {
+    grid-area: cards;
+}
+
+main .card-container {
+    grid-area: pagination;
+} */
+
+footer {
+    grid-area: footer;
+    background-color: blueviolet;
+}
