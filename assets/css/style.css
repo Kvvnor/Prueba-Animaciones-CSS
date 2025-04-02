@@ -20,7 +20,7 @@
 
 .sidebar {
     grid-area: sidebar;
-    background-color: #011826;
+    background-color: #5e5d5d;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,7 +41,7 @@
 
 .menu a {
     text-decoration: none;
-    color: #F2C9D8;
+    color: white;
     font-size: 1.3rem;
 
 }
@@ -56,7 +56,7 @@
 
 header {
     grid-area: header;
-    background-color: #143447;
+    background-color: #1b1b1b;
     padding: 2rem;
     display: flex;
     justify-content: end;
@@ -70,32 +70,78 @@ header form input {
     padding: 5px;  
 }
 
+/* Main */
+
 
 main {
     grid-area: main;
-    background-color: #012840;
+    background-color: #262626;
+}
 
+main .title {
+   text-align: center;
+   margin-top: 0.7rem;
+   color: white;
 }
 
 main img {
-    width: 20%;
+    width: 60%;
+    margin: 3rem;
 }
 
-/* main .card-container {
+main .card-container { 
+    grid-area: main;
+    display: grid;
+    grid-template-areas: 
+    "articles"
+    "pagination";
 
 }
 
-main .card-container {
-    grid-area: cards;
+main .card-container { 
+    grid-area: articles;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 main .card-container {
     grid-area: pagination;
-} */
+} 
 
+/* Pagination */
+
+.pagination {
+    text-align: center;
+    padding: 2rem;
+    margin: 0.8rem;
+
+}
+
+.pagination a {
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: larger;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 1px 0px 7px;
+    border-radius: 4px;
+    color: red;
+    
+}
+
+.pagination a:hover {
+    color: #330099;
+    transition: 0.2s;
+}
+
+
+
+
+
+/* Footer */
 footer {
     grid-area: footer;
-    background-color: #025E73;
+    background-color: #211c1c;
     padding: 2rem;
     position: relative;
 }
