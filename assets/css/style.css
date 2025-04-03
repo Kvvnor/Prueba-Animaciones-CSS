@@ -24,7 +24,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
+    
 }
 
 .sidebar .sidebar-logo img{
@@ -100,16 +100,13 @@ main .title {
 main img {
     width: 60%;
     margin: 3rem;
-    border-radius: 20px;
 }
 
 main .card img {
     border: 1px solid white;
     border-radius: 10px;
     box-shadow: 0px 1px 7px rgb(76, 76, 76);
-    gap: 6px;
     background-color: white;
-    text-align: center;
 }
 
 
@@ -225,19 +222,60 @@ footer h3 {
     font-size: 13px;
 }
 
-@media (max-width: 568px) {
+@media (max-width: 576px) {
 
     .grid-container {
-       grid-template-columns: 3fr;
+       grid-template-columns: 1fr;
        grid-template-rows: auto auto 1fr auto;
        grid-template-areas: 
        "sidebar"
        "header"
        "main"
        "footer";
+       
+    }
+    
+    .sidebar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 3rem
+  
     }
 
-    .sidebar
+    .menu {
+        display: none;
+    }
+
+    .menu-bars {
+        display: contents;
     
+    }
+
+
+    .sidebar .sidebar-logo img {
+        width: 200px;
+    }
+
+    .menu-bars a {
+        color: black;
+        font-size: 26px;
+    }
+
+
+    main .card-container {
+        grid-template-columns: 1fr;
+
+    }
+
+    .card {
+        margin-left: 4.4rem;
+    }
+
+    footer h3 {
+        padding-top: 2rem;
+        
+    }
+
 }
 
